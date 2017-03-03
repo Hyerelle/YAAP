@@ -1,0 +1,32 @@
+doctype
+html
+  head
+    link(rel="stylesheet" href="style/style.css")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.2/css/bulma.min.css")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css")
+
+    script(src="http://zeptojs.com/zepto.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js")
+    //- script hljs.initHighlightingOnLoad();
+
+  body
+
+    != partial("shared/header")
+    
+    .container
+      br
+      h1.has-text-centered.title= title
+      hr
+      
+    section.bg
+      .container
+        .columns
+
+          .column.is-3
+            != partial("shared/menu")
+
+          .column.is-9
+            != yield
+      br
+
+    != partial("shared/footer")
