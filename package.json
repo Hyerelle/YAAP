@@ -1,0 +1,27 @@
+{
+  "name": "yaap",
+  "version": "1.0.0",
+  "description": "Yet Another Analytics Platform",
+  "main": "yaap.js",
+  "scripts": {
+    "dev-site": "node_modules/.bin/harp server website --port 3000",
+    "dev": "node_modules/.bin/watchify ./src/Yaap.js -o ./www/yaap.js",
+    "prod": "node_modules/.bin/harp compile website www && node_modules/.bin/browserify ./src/Yaap.js -o ./www/yaap.js && node_modules/.bin/uglifyjs ./www/yaap.js -m -o ./www/yaap.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sfeir/YAAP.git"
+  },
+  "author": "Quentin LEFEVRE",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sfeir/YAAP/issues"
+  },
+  "homepage": "https://github.com/Sfeir/YAAP#readme",
+  "devDependencies": {
+    "browserify": "^14.1.0",
+    "harp": "^0.23.0",
+    "uglifyjs": "^2.4.10",
+    "watchify": "^3.9.0"
+  }
+}
