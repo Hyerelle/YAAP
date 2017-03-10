@@ -3,12 +3,17 @@
 
 The goal of this project is to build a Google Analytics Premium/Omniture platform with an operating cost close to zero.
 
+
+|**Website** | **[http://yaap-js.appspot.com](http://yaap-js.appspot.com)** |
+|:---:|:---|
+|**CDN** | **[http://yaap-js.appspot.com/yaap.min.js](http://yaap-js.appspot.com/yaap.min.js)** |
+
+
 ## Yaap
 1. [Installation](#installation)
-2. [Initialisation](#initialisation)
-3. [Basic usage](#basic-usage)
-4. [Yaap Trackers](#use-the-yaaptracker-force)
-5. [Yaap Events](#unleash-the-yaapevent-power)
+2. [Basic usage](#basic-usage)
+3. [Yaap Trackers](#use-the-yaaptracker-force)
+4. [Yaap Events](#unleash-the-yaapevent-power)
 
 ## Project
 1. [Commands](#commands)
@@ -25,10 +30,10 @@ To start working with Yaap, link your Yaap with this script tag in your page :
 <script src="yaap.min.js"></script>
 ```
 
-This will make 'Yaap' globally available in your page.
+This will make `Yaap` globally available in your page.
 
 
-## Initialisation
+## Basic usage
 
 In order to start tracking thing with Yaap, you need to define an API endpoint :
 
@@ -40,7 +45,6 @@ Yaap.connect('http://localhost:1337/your-api')
 - By default, the method used to send your data is **GET**, unless you decide otherwise (GET, POST or PIXEL)
 
 
-## Basic usage
 
 To send your first data with Yaap :
 
@@ -118,7 +122,7 @@ That being said, you now know how you can send data based on your user-interacti
 Let's do some basic tracking :
 - When a user click on a button, I want to receive a hit with the text contained in the button
 
-```
+```javascript
 Yaap.tracker('interaction')
     .set('time-loaded', new Date().getTime())           // Date of page load
     .set('time-triggered', () => new Date().getTime())  // Date of event sending
