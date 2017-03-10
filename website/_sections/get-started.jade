@@ -1,0 +1,23 @@
+section#get-started.docs.section
+  .container
+    .docs-inner
+      h2.title.text-center(style="margin-bottom: 15px;") Get started
+      .block
+        h3.sub-title.text-center Send your first data in 3 steps
+        div(style="margin: 20px 0;")
+          p.text-center
+            | First 
+            code(style="margin: 0 10px; display: inline-block;") connect()
+            | your <b>YAAP</b>
+          p.text-center
+            | Then 
+            code(style="margin: 0 10px; display: inline-block;") set()
+            | some properties
+          p.text-center
+            | Finally 
+            code(style="margin: 0 10px; display: inline-block;") send()
+            | them
+        .code-block
+          pre.language-javascript
+            code.language-javascript
+              != partial("../_code/1-first-steps")
