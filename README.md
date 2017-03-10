@@ -30,7 +30,7 @@ To start working with Yaap, link your Yaap with this script tag in your page :
 <script src="yaap.min.js"></script>
 ```
 
-This will make 'Yaap' globally available in your page.
+This will make `Yaap` globally available in your page.
 
 
 ## Basic usage
@@ -122,7 +122,7 @@ That being said, you now know how you can send data based on your user-interacti
 Let's do some basic tracking :
 - When a user click on a button, I want to receive a hit with the text contained in the button
 
-```
+```javascript
 Yaap.tracker('interaction')
     .set('time-loaded', new Date().getTime())           // Date of page load
     .set('time-triggered', () => new Date().getTime())  // Date of event sending
