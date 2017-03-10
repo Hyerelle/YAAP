@@ -94,8 +94,6 @@ YaapAbstract.prototype.extends = function() {
     var self = this
     // Iterates over 'arguments' : ('tracker1', 'tracker2', ...)
     Array.prototype.slice.call(arguments).forEach(function(arg) {
-        console.log('typeof arg : ' + typeof arg)
-        console.log(arg)
         if (_trackers[arg]) this._extends[arg] = _trackers[arg]
     }.bind(this))
     return this
@@ -218,7 +216,6 @@ YaapAbstract.prototype.send = function(sendName) {
 
                 case 'POST':
                     var xhr = new XMLHttpRequest()
-                    console.log(values)
                     xhr.open('POST', _connector.url, true)
                     xhr.setRequestHeader("Content-type", "application/json");
                     xhr.send(JSON.stringify(values));
