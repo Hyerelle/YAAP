@@ -1,32 +1,25 @@
 doctype
 html
   head
+    title YAAP - Yet Another Analytics Platform
+
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='description', content='YAAP - Another Analytics Platform')
+    meta(name='author', content='Quentin LEFEVRE')
+    link(rel='shortcut icon', href='favicon.ico')
+
+    link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", rel="stylesheet")
+    link(rel="stylesheet" href="style/libs.min.css")
     link(rel="stylesheet" href="style/style.css")
-    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.2/css/bulma.min.css")
-    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css")
 
-    script(src="http://zeptojs.com/zepto.min.js")
-    script(src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js")
-    //- script hljs.initHighlightingOnLoad();
+    script(src="js/libs.min.js")
+    script(src="js/main.js")
 
-  body
 
-    != partial("shared/header")
+  body(data-spy='scroll')
+
+    != partial("_shared/header")
     
-    .container
-      br
-      h1.has-text-centered.title= title
-      hr
-      
-    section.bg
-      .container
-        .columns
-
-          .column.is-3
-            != partial("shared/menu")
-
-          .column.is-9
-            != yield
-      br
-
-    != partial("shared/footer")
+    != yield

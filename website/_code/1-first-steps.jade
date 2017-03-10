@@ -1,0 +1,15 @@
+|// Connect YAPP to your API
+|Yaap.connect('http://localhost/your-api')
+| 
+|// Set some informations
+|Yaap.set('type', 'pageview')  
+|Yaap.set('url', location.href)
+|Yaap.set('title', document.title)
+|Yaap.set('source', document.referrer)
+|Yaap.set('viewport', window.innerWidth + 'x' + window.innerHeight)
+|Yaap.set('device', function() {
+|    return /Mobile/i.test(navigator.userAgent) ? 'mobile' : 'desktop'
+|})
+| 
+|// Send it !
+|Yaap.send()
