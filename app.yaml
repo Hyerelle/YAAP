@@ -1,0 +1,22 @@
+ application: yaap-js
+ version: 1
+ runtime: python27
+ api_version: 1
+ threadsafe: true
+
+ handlers:
+ - url: /
+   static_files: www/index.html
+   upload: www/index.html
+
+ - url: /(.*)
+   static_files: www/\1
+   upload: www/(.*)
+
+ skip_files:
+ - ^(.*/)?app\.yaml
+ - ^(.*/)?package\.json
+ - ^(.*/)?README\.md
+ - ^src/(.*/)?
+ - ^website/(.*/)?
+ - ^node_modules/(.*/)?
